@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Global Styles & Reset
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set basic fonts, background, and text color */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Header & Navigation Styles
+   ========================================================================== */
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #3366cc;
+}
+
+/* Navigation Bar */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #3366cc;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Mobile Menu Toggle (if implemented later) */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Section Styles
+   ========================================================================== */
+
+/* About Me Section */
+#about-me {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#about-me p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+#projects {
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+#projects article {
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+#projects figure {
+  margin: 0;
+}
+
+#projects img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#projects figcaption {
+  padding: 15px;
+}
+
+#projects figcaption h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#projects figcaption p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+#projects figcaption a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #3366cc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#projects figcaption a:hover {
+  background-color: #254e8b;
+}
+
+/* Skills Section */
+#skills {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+#skills ul li {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+/* Sample Icon added before each skill using a pseudo-class */
+#skills ul li::before {
+  content: "★";
+  color: #3366cc;
+  margin-right: 8px;
+}
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact form div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact button {
+  background-color: #3366cc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #254e8b;
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   Responsive Design & Media Queries
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Navigation adjustment for small screens */
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* (Optional) Show mobile menu toggle if implemented */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Vendor Prefixes (Example)
+   ========================================================================== */
+/* For older browser support */
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
